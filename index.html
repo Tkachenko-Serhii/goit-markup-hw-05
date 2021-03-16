@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body class="body">
     <header class="header">
         <div class="container">
             <nav class="header-navigation">
@@ -43,7 +43,16 @@
         <section class="hero">
             <div class="container hero-position">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="modal-btn" type="button">Заказать услугу</button>
+                <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
+            </div>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    <button class="modal-btn-close" type="button" data-modal-close>
+                        <svg width=11px height=11px>
+                            <use href="./img/icons.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </section>
     <!--ADVANTAGE-->
@@ -54,7 +63,7 @@
                     <li class="advantage-item">
                         <div class="advantage-img-box">
                             <svg width=70px height=70px>
-                            <use href="./img/icons.svg#antenna"></use>
+                                <use href="./img/icons.svg#antenna"></use>
                             </svg>
                         </div>
                         <h3 class="advantage-item-title">Внимание к деталям</h3>
@@ -63,7 +72,7 @@
                     <li class="advantage-item">
                         <div class="advantage-img-box">
                             <svg width=70px height=70px>
-                            <use href="./img/icons.svg#clock"></use>
+                                <use href="./img/icons.svg#clock"></use>
                             </svg>
                         </div>
                         <h3 class="advantage-item-title">Пунктуальность</h3>
@@ -72,7 +81,7 @@
                     <li class="advantage-item">
                         <div class="advantage-img-box">
                             <svg width=70px height=70px>
-                            <use href="./img/icons.svg#diagram"></use>
+                                <use href="./img/icons.svg#diagram"></use>
                             </svg>
                         </div>
                         <h3 class="advantage-item-title">Планирование</h3>
@@ -81,7 +90,7 @@
                     <li class="advantage-item">
                         <div class="advantage-img-box">
                             <svg width=70px height=70px>
-                            <use href="./img/icons.svg#astronaut"></use>
+                                <use href="./img/icons.svg#astronaut"></use>
                             </svg>
                         </div>
                         <h3 class="advantage-item-title">Современные технологии</h3>
@@ -377,5 +386,6 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
