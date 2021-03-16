@@ -67,6 +67,15 @@ img {
   font-style: normal;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 .title {
   font-weight: bold;
   font-size: 36px;
@@ -76,15 +85,16 @@ img {
   color: var(--title-color);
 }
 
-.backdrop {
-  position: fixed;
-  width: 100px;
-  height: 100px;
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 582px;
   background: var(--main-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  visibility: visible;
-  opacity: 1;
 }
 
 .is-hidden {
@@ -158,8 +168,10 @@ img {
 .social-list-link:hover .social-list-icon {
   fill: var(--main-color);
 }
+
 /*========HEADER========*/
 .header {
+  background-color: var(--main-color);
   border-bottom: var(--line-color) solid 1px;
 }
 .header .container {
@@ -176,19 +188,15 @@ img {
   align-items: center;
 }
 
-.navigation-item {
-  position: relative;
-}
-
 .active-link::after {
-  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 4px;
+  content: "";
   background-color: var(--accent-color);
   border-radius: 2px;
-  position: absolute;
-  top: 46px;
-  left: 0;
   overflow: hidden;
 }
 
@@ -213,6 +221,7 @@ img {
 }
 
 .navigation-link {
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -375,6 +384,7 @@ img {
 
 /*========ADVANTAGE========*/
 .advantage {
+  background-color: var(--main-color);
   padding-top: 94px;
   padding-bottom: 47px;
 }
@@ -421,6 +431,7 @@ img {
 
 /*========GALLERY========*/
 .gallery {
+  background-color: var(--main-color);
   padding-top: 47px;
   padding-bottom: 94px;
 }
@@ -512,6 +523,10 @@ width: 100%;
 
 /*========REGULAR CUSTOMERS========*/
 .regular-customers {
+  background-color: var(--main-color);
+}
+
+.rc-title {
   margin-bottom: 50px;
 }
 
@@ -604,13 +619,13 @@ width: 100%;
 
 /*========WORK CATEGORIES========*/
 .description {
-  padding: 63px 24px;
   position: absolute;
   top: 0;
-  min-height: 294px;
-  width: 370px;
+  left: 0;
+  width: 100%;
+  padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
-  transform: translateY(+150%);
+  /*transform: translateY(+150%);*/
 }
 
 .description-text {
